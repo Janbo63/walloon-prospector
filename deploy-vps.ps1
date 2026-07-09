@@ -58,5 +58,5 @@ echo "✅ Deployment complete!"
 echo "🌐 Walloon Prospector running on port 3500"
 '@
 
-Write-Host "🚀 Starting remote deployment to VPS..." -ForegroundColor Orange
+Write-Host "🚀 Starting remote deployment to VPS..." -ForegroundColor Yellow
 $commands | ssh -i C:\Users\jan\.ssh\id_rsa eviscout@46.202.129.30 "bash"

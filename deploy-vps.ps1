@@ -19,7 +19,7 @@ cd /var/www/walloon-prospector
 if [ ! -d ".git" ]; then
   echo "📥 Cloning repository..."
   # Replace with the actual repository URL once pushed to GitHub
-  git clone https://github.com/janskifura/walloon-prospector.git .
+  git clone https://github.com/Janbo63/walloon-prospector.git .
 else
   # Ensure git safe.directory is set
   git config --global --add safe.directory /var/www/walloon-prospector 2>/dev/null || true

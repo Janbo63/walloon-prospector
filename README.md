@@ -58,7 +58,7 @@ If you haven't already, push your code to your GitHub repository:
 git init
 git add .
 git commit -m "feat: initial commit of Walloon Prospector"
-git remote add origin https://github.com/janskifura/walloon-prospector.git
+git remote add origin https://github.com/Janbo63/walloon-prospector.git
 git branch -M main
 git push -u origin main
 ```

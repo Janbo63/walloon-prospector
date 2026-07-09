@@ -1,10 +1,8 @@
-# Walloon Prospector — Direct VPS Deployment Script
+# Walloon Prospector — Direct VPS Deployment Script (PowerShell Native)
 # Run this from your local machine in PowerShell:
 # .\deploy-vps.ps1
 
-Write-Host "🚀 Starting remote deployment of Walloon Prospector to VPS (46.202.129.30)..." -ForegroundColor Orange
-
-ssh -i C:\Users\jan\.ssh\id_rsa eviscout@46.202.129.30 "bash -s" <<'EOF'
+$commands = @'
 set -e
 echo "🚀 Starting Walloon Prospector deployment on VPS..."
 
@@ -18,7 +16,6 @@ cd /var/www/walloon-prospector
 # Check if git repository is initialized
 if [ ! -d ".git" ]; then
   echo "📥 Cloning repository..."
-  # Replace with the actual repository URL once pushed to GitHub
   git clone https://github.com/Janbo63/walloon-prospector.git .
 else
   # Ensure git safe.directory is set
@@ -59,4 +56,7 @@ sudo pm2 save
 
 echo "✅ Deployment complete!"
 echo "🌐 Walloon Prospector running on port 3500"
-EOF
+'@
+
+Write-Host "🚀 Starting remote deployment to VPS..." -ForegroundColor Orange
+$commands | ssh -i C:\Users\jan\.ssh\id_rsa eviscout@46.202.129.30 "bash"

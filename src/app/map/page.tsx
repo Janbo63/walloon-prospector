@@ -223,6 +223,25 @@ export default function MapPage() {
               <path d="M 50 250 L 100 210 L 130 230 L 190 180 L 250 210 L 320 160 L 390 220" fill="none" stroke="rgba(212, 175, 55, 0.08)" strokeWidth="1" />
               <text x="180" y="175" fill="rgba(212, 175, 55, 0.15)" className="font-serif italic text-[6px] tracking-widest uppercase">Izera Foothills</text>
               
+              {/* Town Labels for Context */}
+              <text x="75" y="45" fill="rgba(212, 175, 55, 0.3)" stroke="none" className="font-serif italic text-[7px]" letterSpacing="1">Mirsk</text>
+              <text x="130" y="105" fill="rgba(212, 175, 55, 0.3)" stroke="none" className="font-serif italic text-[7px]" letterSpacing="1">Krobica</text>
+              <text x="200" y="155" fill="rgba(212, 175, 55, 0.3)" stroke="none" className="font-serif italic text-[7px]" letterSpacing="1">Przecznica</text>
+              <text x="50" y="200" fill="rgba(212, 175, 55, 0.3)" stroke="none" className="font-serif italic text-[7px]" letterSpacing="1">Świeradów-Zdrój</text>
+              <text x="275" y="245" fill="rgba(212, 175, 55, 0.3)" stroke="none" className="font-serif italic text-[7px]" letterSpacing="1">Szklarska Poręba</text>
+
+              {/* Map Scale Bar */}
+              <g transform="translate(20, 265)" stroke="rgba(212, 175, 55, 0.25)" strokeWidth="0.5" fill="none">
+                <line x1="0" y1="0" x2="60" y2="0" />
+                <line x1="0" y1="-3" x2="0" y2="3" />
+                <line x1="30" y1="-2" x2="30" y2="2" />
+                <line x1="60" y1="-3" x2="60" y2="3" />
+                <text x="0" y="-5" stroke="none" fill="rgba(212, 175, 55, 0.35)" className="font-sans text-[5px]">0</text>
+                <text x="27" y="-5" stroke="none" fill="rgba(212, 175, 55, 0.35)" className="font-sans text-[5px]">2</text>
+                <text x="56" y="-5" stroke="none" fill="rgba(212, 175, 55, 0.35)" className="font-sans text-[5px]">4 km</text>
+                <text x="0" y="9" stroke="none" fill="rgba(212, 175, 55, 0.25)" className="font-serif italic text-[5px]">Stara Kamienica Schist Belt</text>
+              </g>
+
               {/* Compass Rose */}
               <g transform="translate(50, 50)" stroke="rgba(212, 175, 55, 0.15)" strokeWidth="0.5" fill="none">
                 <circle cx="0" cy="0" r="15" />

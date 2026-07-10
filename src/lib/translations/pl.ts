@@ -14,7 +14,7 @@ export const pl: TranslationType = {
   },
   public: {
     welcome: "Odkryj Tajemnice Gór",
-    description: "Witaj w Zagrodzie Alpakoterapii. Wieki temu legendarni Walończycy (średniowieczni poszukiwacze skarbów) wędrowali po tych dolinach, kierując się tajnymi znakami w poszukiwaniu złota, kamieni szlachetnych i cyny. Użyj naszej cyfrowej księgi, aby zidentyfikować znalezione kamienie i odkryć ich historyczną opowieść.",
+    description: "Witaj w świecie Walończyków. Wieki temu legendarni poszukiwacze skarbów wędrowali po tych dolinach, kierując się tajnymi znakami w poszukiwaniu złota, kamieni szlachetnych i cyny. Użyj naszej cyfrowej księgi, aby zidentyfikować znalezione kamienie i odkryć ich historyczną opowieść.",
     scanButton: "Zeskanuj Kamień (Oko Walończyka)",
     mapButton: "Eksploruj Mapę Walońską",
     scanner: {

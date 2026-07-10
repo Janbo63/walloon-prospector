@@ -12,7 +12,7 @@ export const en = {
   },
   public: {
     welcome: "Unlock the Secrets of the Mountains",
-    description: "Welcome to Zagroda Alpakoterapii. Centuries ago, the legendary Walloons (medieval treasure hunters) roamed these valleys guided by secret codes, searching for gold, gems, and tin. Use our digital codex to identify rocks you find and uncover their historical stories.",
+    description: "Welcome to the world of Walloons. Centuries ago, the legendary treasure hunters roamed these valleys guided by secret codes, searching for gold, gems, and tin. Use our digital codex to identify rocks you find and uncover their historical stories.",
     scanButton: "Scan a Rock (Walloon's Eye)",
     mapButton: "Explore the Walloon Map",
     scanner: {

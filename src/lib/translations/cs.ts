@@ -14,7 +14,7 @@ export const cs: TranslationType = {
   },
   public: {
     welcome: "Odhalte Tajemství Hor",
-    description: "Vítejte v Zagrodě Alpakoterapii. Před staletími se v těchto údolích potulovali legendární Vlaši (středověcí hledači pokladů, v polštině nazývaní Walończycy), vedeni tajnými šiframi při hledání zlata, drahokamů a cínu. Použijte náš digitální kodex k identifikaci kamenů, které najdete, a odhalte jejich historický příběh.",
+    description: "Vítejte ve světě Vlachů (Walończyků). Před staletími se v těchto údolích potulovali legendární vlašští hledači pokladů, vedeni tajnými šiframi při hledání zlata, drahokamů a cínu. Použijte náš digitální kodex k identifikaci kamenů, které najdete, a odhalte jejich historický příběh.",
     scanButton: "Naskenovat Kámen (Vlašské Oko)",
     mapButton: "Prozkoumat Vlašskou Mapu",
     scanner: {

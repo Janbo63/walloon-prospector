@@ -16,6 +16,11 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "Waloński Kodex — Walloon Codex",
   description: "Identify regional Sudeten minerals and explore the legendary history of the Walloons.",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "Poszukiwacz",
+  },
 };
 
 export default function RootLayout({

@@ -193,63 +193,63 @@ export default function MapPage() {
         {/* Map Container */}
         <div className="w-full grid md:grid-cols-3 gap-6 items-start">
           {/* SVG Map Card */}
-          <div className="md:col-span-2 relative border border-gold/30 rounded-lg overflow-hidden bg-black/60 shadow-2xl w-full aspect-[4/3]">
+          <div className="md:col-span-2 relative border border-[#cbbb9d] rounded-lg overflow-hidden bg-[#ebdcb9] shadow-2xl w-full aspect-[4/3]">
             {/* Background Parchment Map Grid */}
             <div 
-              className="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-overlay"
+              className="absolute inset-0 bg-cover bg-center opacity-70 mix-blend-multiply"
               style={{ backgroundImage: "url('/walloon_parchment_bg.png')" }}
             ></div>
 
             {/* Simulated Hand-Drawn Map Markings */}
             <svg viewBox="0 0 400 300" className="w-full h-full absolute inset-0 select-none">
               {/* Grid Lines */}
-              <line x1="100" y1="0" x2="100" y2="300" stroke="rgba(212, 175, 55, 0.05)" strokeWidth="0.5" />
-              <line x1="200" y1="0" x2="200" y2="300" stroke="rgba(212, 175, 55, 0.05)" strokeWidth="0.5" />
-              <line x1="300" y1="0" x2="300" y2="300" stroke="rgba(212, 175, 55, 0.05)" strokeWidth="0.5" />
-              <line x1="0" y1="100" x2="400" y2="100" stroke="rgba(212, 175, 55, 0.05)" strokeWidth="0.5" />
-              <line x1="0" y1="200" x2="400" y2="200" stroke="rgba(212, 175, 55, 0.05)" strokeWidth="0.5" />
+              <line x1="100" y1="0" x2="100" y2="300" stroke="rgba(100, 75, 45, 0.12)" strokeWidth="0.5" />
+              <line x1="200" y1="0" x2="200" y2="300" stroke="rgba(100, 75, 45, 0.12)" strokeWidth="0.5" />
+              <line x1="300" y1="0" x2="300" y2="300" stroke="rgba(100, 75, 45, 0.12)" strokeWidth="0.5" />
+              <line x1="0" y1="100" x2="400" y2="100" stroke="rgba(100, 75, 45, 0.12)" strokeWidth="0.5" />
+              <line x1="0" y1="200" x2="400" y2="200" stroke="rgba(100, 75, 45, 0.12)" strokeWidth="0.5" />
 
               {/* Hand Drawn Rivers */}
               <path 
                 d="M -10 100 Q 150 90 200 130 T 410 200" 
                 fill="none" 
-                stroke="rgba(110, 150, 180, 0.15)" 
+                stroke="rgba(75, 101, 132, 0.45)" 
                 strokeWidth="2.5" 
                 strokeDasharray="5 2"
               />
-              <text x="310" y="195" fill="rgba(110, 150, 180, 0.25)" className="font-serif italic text-[6px]">Kwisa River</text>
+              <text x="310" y="195" fill="rgba(75, 101, 132, 0.65)" className="font-serif italic font-bold text-[7px]">Kwisa River</text>
 
               {/* Mountain ridge outlines */}
-              <path d="M 50 250 L 100 210 L 130 230 L 190 180 L 250 210 L 320 160 L 390 220" fill="none" stroke="rgba(212, 175, 55, 0.08)" strokeWidth="1" />
-              <text x="180" y="175" fill="rgba(212, 175, 55, 0.15)" className="font-serif italic text-[6px] tracking-widest uppercase">Izera Foothills</text>
+              <path d="M 50 250 L 100 210 L 130 230 L 190 180 L 250 210 L 320 160 L 390 220" fill="none" stroke="rgba(127, 100, 49, 0.35)" strokeWidth="1.5" />
+              <text x="180" y="174" fill="rgba(127, 100, 49, 0.55)" className="font-serif italic font-black text-[7px] tracking-widest uppercase">Izera Foothills</text>
               
               {/* Town Labels for Context */}
-              <text x="75" y="45" fill="rgba(212, 175, 55, 0.3)" stroke="none" className="font-serif italic text-[7px]" letterSpacing="1">Mirsk</text>
-              <text x="130" y="105" fill="rgba(212, 175, 55, 0.3)" stroke="none" className="font-serif italic text-[7px]" letterSpacing="1">Krobica</text>
-              <text x="200" y="155" fill="rgba(212, 175, 55, 0.3)" stroke="none" className="font-serif italic text-[7px]" letterSpacing="1">Przecznica</text>
-              <text x="50" y="200" fill="rgba(212, 175, 55, 0.3)" stroke="none" className="font-serif italic text-[7px]" letterSpacing="1">Świeradów-Zdrój</text>
-              <text x="275" y="245" fill="rgba(212, 175, 55, 0.3)" stroke="none" className="font-serif italic text-[7px]" letterSpacing="1">Szklarska Poręba</text>
+              <text x="75" y="45" fill="#4a3b22" stroke="none" className="font-serif font-black text-[9px] uppercase tracking-wider">Mirsk</text>
+              <text x="130" y="105" fill="#4a3b22" stroke="none" className="font-serif font-black text-[9px] uppercase tracking-wider">Krobica</text>
+              <text x="200" y="155" fill="#4a3b22" stroke="none" className="font-serif font-black text-[9px] uppercase tracking-wider">Przecznica</text>
+              <text x="50" y="200" fill="#4a3b22" stroke="none" className="font-serif font-black text-[9px] uppercase tracking-wider">Świeradów-Zdrój</text>
+              <text x="275" y="245" fill="#4a3b22" stroke="none" className="font-serif font-black text-[9px] uppercase tracking-wider">Szklarska Poręba</text>
 
               {/* Map Scale Bar */}
-              <g transform="translate(20, 265)" stroke="rgba(212, 175, 55, 0.25)" strokeWidth="0.5" fill="none">
+              <g transform="translate(20, 265)" stroke="rgba(100, 75, 45, 0.7)" strokeWidth="0.75" fill="none">
                 <line x1="0" y1="0" x2="60" y2="0" />
                 <line x1="0" y1="-3" x2="0" y2="3" />
                 <line x1="30" y1="-2" x2="30" y2="2" />
                 <line x1="60" y1="-3" x2="60" y2="3" />
-                <text x="0" y="-5" stroke="none" fill="rgba(212, 175, 55, 0.35)" className="font-sans text-[5px]">0</text>
-                <text x="27" y="-5" stroke="none" fill="rgba(212, 175, 55, 0.35)" className="font-sans text-[5px]">2</text>
-                <text x="56" y="-5" stroke="none" fill="rgba(212, 175, 55, 0.35)" className="font-sans text-[5px]">4 km</text>
-                <text x="0" y="9" stroke="none" fill="rgba(212, 175, 55, 0.25)" className="font-serif italic text-[5px]">Stara Kamienica Schist Belt</text>
+                <text x="0" y="-5" stroke="none" fill="#4a3b22" className="font-sans font-bold text-[6px]">0</text>
+                <text x="27" y="-5" stroke="none" fill="#4a3b22" className="font-sans font-bold text-[6px]">2</text>
+                <text x="56" y="-5" stroke="none" fill="#4a3b22" className="font-sans font-bold text-[6px]">4 km</text>
+                <text x="0" y="9" stroke="none" fill="rgba(100, 75, 45, 0.8)" className="font-serif font-black text-[6px] tracking-wide uppercase">Stara Kamienica Schist Belt</text>
               </g>
 
               {/* Compass Rose */}
-              <g transform="translate(50, 50)" stroke="rgba(212, 175, 55, 0.15)" strokeWidth="0.5" fill="none">
+              <g transform="translate(50, 50)" stroke="rgba(127, 100, 49, 0.6)" strokeWidth="0.75" fill="none">
                 <circle cx="0" cy="0" r="15" />
                 <line x1="0" y1="-20" x2="0" y2="20" />
                 <line x1="-20" y1="0" x2="20" y2="0" />
-                <polygon points="0,-20 3,-5 0,0 -3,-5" fill="rgba(212, 175, 55, 0.1)" />
-                <polygon points="0,20 3,5 0,0 -3,5" fill="rgba(212, 175, 55, 0.05)" />
-                <text x="-2" y="-23" fill="rgba(212, 175, 55, 0.3)" className="font-serif text-[6px] font-bold">N</text>
+                <polygon points="0,-20 3,-5 0,0 -3,-5" fill="rgba(127, 100, 49, 0.25)" />
+                <polygon points="0,20 3,5 0,0 -3,5" fill="rgba(127, 100, 49, 0.15)" />
+                <text x="-2.5" y="-23" fill="#4a3b22" stroke="none" className="font-serif text-[8px] font-black">N</text>
               </g>
             </svg>
 
@@ -259,10 +259,10 @@ export default function MapPage() {
                 key={loc.id}
                 onClick={() => setSelectedLocation(loc)}
                 style={{ left: `${loc.x}%`, top: `${loc.y}%` }}
-                className={`absolute -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-8 h-8 rounded-full border bg-black/60 shadow-lg group transition cursor-pointer ${
+                className={`absolute -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-8 h-8 rounded-full border shadow-xl group transition cursor-pointer ${
                   selectedLocation?.id === loc.id
-                    ? "border-gold bg-gold/10 text-gold scale-110"
-                    : "border-gold/30 text-gold/60 hover:border-gold hover:text-gold"
+                    ? "border-gold bg-black text-gold scale-120 ring-4 ring-gold/20"
+                    : "border-gold-dark/40 bg-[#3b301c] text-[#f7ebd3] hover:border-gold hover:bg-black hover:text-gold"
                 }`}
               >
                 <MapPin className="w-4 h-4 group-hover:animate-bounce" />

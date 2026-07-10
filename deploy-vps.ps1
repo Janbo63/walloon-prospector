@@ -8,7 +8,7 @@ echo "🚀 Starting Walloon Prospector deployment on VPS..."
 
 # Setup directories if they don't exist
 sudo mkdir -p /var/www/walloon-prospector
-sudo chown -R eviscout:eviscout /var/www/walloon-prospector
+sudo chown -R walloon:walloon /var/www/walloon-prospector
 
 # Navigate to app directory
 cd /var/www/walloon-prospector
@@ -43,7 +43,7 @@ npm run build
 
 # Fix file ownership
 echo "🔑 Fixing file ownership..."
-chown -R eviscout:eviscout /var/www/walloon-prospector 2>/dev/null || true
+chown -R walloon:walloon /var/www/walloon-prospector 2>/dev/null || true
 
 # Restart PM2 on port 3500
 echo "♻️ Restarting application..."
@@ -59,4 +59,4 @@ echo "🌐 Walloon Prospector running on port 3500"
 '@
 
 Write-Host "🚀 Starting remote deployment to VPS..." -ForegroundColor Yellow
-$commands | ssh -i C:\Users\jan\.ssh\id_rsa eviscout@46.202.129.30 "bash"
+$commands | ssh -i C:\Users\jan\.ssh\id_rsa -o StrictHostKeyChecking=no walloon@46.202.129.30 "bash"

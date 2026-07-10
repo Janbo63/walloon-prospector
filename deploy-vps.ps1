@@ -47,12 +47,12 @@ chown -R walloon:walloon /var/www/walloon-prospector 2>/dev/null || true
 
 # Restart PM2 on port 3500
 echo "♻️ Restarting application..."
-sudo fuser -k 3500/tcp 2>/dev/null || true
+fuser -k 3500/tcp 2>/dev/null || true
 sleep 1
-sudo pm2 restart walloon-prospector 2>/dev/null || sudo pm2 start node_modules/.bin/next --name walloon-prospector -- start -p 3500
+pm2 restart walloon-prospector 2>/dev/null || pm2 start node_modules/.bin/next --name walloon-prospector -- start -p 3500
 
 # Save PM2 process list
-sudo pm2 save
+pm2 save
 
 echo "✅ Deployment complete!"
 echo "🌐 Walloon Prospector running on port 3500"

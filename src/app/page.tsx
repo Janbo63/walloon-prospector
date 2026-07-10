@@ -127,9 +127,8 @@ export default function Home() {
         </section>
       </main>
 
-      {/* Footer */}
       <footer className="border-t border-white/5 bg-black/50 py-4 text-center text-[10px] text-gray-500 font-sans">
-        <p>© 2026 Zagroda Alpakoterapii — Project Prospector. All rights reserved.</p>
+        <p>© 2026 Future Solutions AI — Walloon. All rights reserved.</p>
       </footer>
     </div>
   );

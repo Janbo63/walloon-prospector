@@ -2,8 +2,8 @@ import { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Waloński Poszukiwacz",
-    short_name: "Poszukiwacz",
+    name: "Walloon",
+    short_name: "Walloon",
     description: "Walloon Prospector & Rock Scanner",
     start_url: "/",
     display: "standalone",

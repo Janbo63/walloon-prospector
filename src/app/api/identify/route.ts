@@ -38,7 +38,7 @@ export async function POST(req: NextRequest) {
 
     let prompt = "";
     if (mode === "visitor") {
-      prompt = `You are a wise medieval Walloon prospector's alchemist. Identify this rock from the photo. Keep it simple, engaging, and friendly for tourists and families visiting our farm (Zagroda Alpakoterapii) in the Jizerské/Sudeten mountains near Mirsk/Krobica.
+      prompt = `You are a wise medieval Walloon prospector's alchemist. Identify this rock from the photo. Keep it simple, engaging, and friendly for tourists and families exploring the Jizerské/Sudeten mountains near Mirsk/Krobica.
       
       Output a valid JSON object in ${targetLangName} with the following fields:
       - name: The rock's common name in ${targetLangName}.

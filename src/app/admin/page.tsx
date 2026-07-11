@@ -640,7 +640,7 @@ export default function AdminDashboard() {
 
                       <div className="text-center border-b border-gold-dark/20 pb-4 mb-5">
                         <span className="text-[9px] text-gold-dark font-serif uppercase tracking-widest mb-1 block">
-                          Zagroda Alpakoterapii — Provenance Card
+                          Future Solutions AI — Provenance Card
                         </span>
                         <h2 className="text-2xl font-serif font-black tracking-wide text-gold-dark">
                           {selectedSpecimenForCard.nameEn}

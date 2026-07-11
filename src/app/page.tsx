@@ -66,7 +66,7 @@ export default function Home() {
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-1.5 border border-gold/30 bg-gold/5 px-3 py-1 rounded-full text-xs text-gold font-serif mb-4">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Zagroda Alpakoterapii</span>
+            <span>Future Solutions AI</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-3 tracking-wide">
             {t.public.welcome}

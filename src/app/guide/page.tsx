@@ -835,12 +835,7 @@ export default function GuidePage() {
   };
 
   // Offline pre-download trigger
-  const triggerOfflineDownload = () => {
-    if (!('serviceWorker' in navigator)) {
-      alert("Service worker is not supported on this browser.");
-      return;
-    }
-    
+  const triggerOfflineDownload = async () => {
     setIsDownloading(true);
     setDownloadProgress(0);
     
@@ -859,14 +854,39 @@ export default function GuidePage() {
       ...audioUrls
     ];
 
-    navigator.serviceWorker.ready.then((registration) => {
-      if (registration.active) {
-        registration.active.postMessage({
-          type: 'DOWNLOAD_TOUR',
-          urls: assetsToCache
-        });
+    try {
+      if (!('caches' in window)) {
+        alert("Cache Storage is not supported on this browser.");
+        setIsDownloading(false);
+        return;
       }
-    });
+
+      const cache = await window.caches.open('walloon-guide-v1');
+      let completed = 0;
+      const total = assetsToCache.length;
+      
+      for (const url of assetsToCache) {
+        try {
+          const response = await fetch(url);
+          if (response.ok) {
+            await cache.put(url, response);
+          } else {
+            console.warn(`Failed to fetch ${url} (status: ${response.status})`);
+          }
+        } catch (err) {
+          console.error(`Error caching ${url}:`, err);
+        }
+        completed++;
+        setDownloadProgress(Math.round((completed / total) * 100));
+      }
+      
+      setIsDownloading(false);
+      setIsCached(true);
+    } catch (err) {
+      console.error("Local caching failed:", err);
+      alert("Local caching failed. If you are in Private/Incognito browsing mode, please switch to a normal tab to enable offline downloads.");
+      setIsDownloading(false);
+    }
   };
 
   const formatTime = (secs: number) => {

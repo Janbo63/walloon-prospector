@@ -680,6 +680,10 @@ export default function GuidePage() {
 
   // Handle ambient sound synthesis initialization
   useEffect(() => {
+    const handleControllerChange = () => {
+      window.location.reload();
+    };
+
     // Register Service Worker
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js').then((registration) => {
@@ -687,6 +691,8 @@ export default function GuidePage() {
       }).catch((err) => {
         console.error('Service Worker registration failed:', err);
       });
+      
+      navigator.serviceWorker.addEventListener('controllerchange', handleControllerChange);
     }
 
     synthRef.current = new CaveAmbientSynthesizer();
@@ -720,6 +726,7 @@ export default function GuidePage() {
         synthRef.current.stop();
       }
       if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.removeEventListener('controllerchange', handleControllerChange);
         navigator.serviceWorker.onmessage = null;
       }
     };

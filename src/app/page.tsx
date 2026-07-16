@@ -77,7 +77,7 @@ export default function Home() {
         </div>
 
         {/* Action Selection Cards */}
-        <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto w-full mb-14">
+        <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto w-full mb-14">
           {/* Eye of the Walloon (Scanner) */}
           <Link
             href="/scanner"
@@ -96,6 +96,27 @@ export default function Home() {
             </div>
             <span className="w-full py-2 bg-gold hover:bg-gold-light text-black font-semibold text-sm rounded shadow transition font-serif">
               {t.public.scanButton}
+            </span>
+          </Link>
+
+          {/* Interactive Tour Guide */}
+          <Link
+            href="/guide"
+            className="codex-card p-6 rounded-lg text-center flex flex-col items-center justify-between group hover:scale-[1.02] active:scale-[0.98] border border-gold/10"
+          >
+            <div className="w-14 h-14 bg-gold/10 border border-gold/30 rounded-full flex items-center justify-center mb-4 group-hover:bg-gold/25 transition">
+              <Compass className="w-7 h-7 text-gold animate-spin-slow" />
+            </div>
+            <div>
+              <h2 className="font-serif font-bold text-lg text-white mb-2">
+                {t.public.guide.title}
+              </h2>
+              <p className="text-xs text-gray-400 mb-4 px-2 leading-relaxed">
+                {t.public.guide.description}
+              </p>
+            </div>
+            <span className="w-full py-2 border border-gold hover:bg-gold/10 text-gold font-semibold text-sm rounded transition font-serif">
+              {t.public.guideButton}
             </span>
           </Link>
 

@@ -15,6 +15,11 @@ export const en = {
     description: "Welcome to the world of Walloons. Centuries ago, the legendary treasure hunters roamed these valleys guided by secret codes, searching for gold, gems, and tin. Use our digital codex to identify rocks you find and uncover their historical stories.",
     scanButton: "Scan a Rock (Walloon's Eye)",
     mapButton: "Explore the Walloon Map",
+    guideButton: "Start Audio Guide",
+    guide: {
+      title: "Audio Guide & Tour",
+      description: "Listen to the offline history and stories of Krobica Mine as you walk the tunnels."
+    },
     scanner: {
       title: "The Walloon's Eye",
       instruction: "Take a photo or upload an image of a rock you found to scan it with the alchemist's lens.",

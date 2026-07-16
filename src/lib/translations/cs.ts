@@ -17,6 +17,11 @@ export const cs: TranslationType = {
     description: "Vítejte ve světě Vlachů (Walończyků). Před staletími se v těchto údolích potulovali legendární vlašští hledači pokladů, vedeni tajnými šiframi při hledání zlata, drahokamů a cínu. Použijte náš digitální kodex k identifikaci kamenů, které najdete, a odhalte jejich historický příběh.",
     scanButton: "Naskenovat Kámen (Vlašské Oko)",
     mapButton: "Prozkoumat Vlašskou Mapu",
+    guideButton: "Spustit Průvodce",
+    guide: {
+      title: "Audio Průvodce",
+      description: "Poslouchejte offline historii a příběhy dolu Krobica při procházení štol."
+    },
     scanner: {
       title: "Vlašské Oko",
       instruction: "Vyfoťte nebo nahrajte fotku nalezeného kamene a prozkoumejte ho skrze alchymistickou čočku.",

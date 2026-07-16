@@ -17,6 +17,11 @@ export const pl: TranslationType = {
     description: "Witaj w świecie Walończyków. Wieki temu legendarni poszukiwacze skarbów wędrowali po tych dolinach, kierując się tajnymi znakami w poszukiwaniu złota, kamieni szlachetnych i cyny. Użyj naszej cyfrowej księgi, aby zidentyfikować znalezione kamienie i odkryć ich historyczną opowieść.",
     scanButton: "Zeskanuj Kamień (Oko Walończyka)",
     mapButton: "Eksploruj Mapę Walońską",
+    guideButton: "Uruchom Przewodnik",
+    guide: {
+      title: "Audioprzewodnik i Trasa",
+      description: "Słuchaj historii kopalni Krobica w trybie offline podczas zwiedzania sztolni."
+    },
     scanner: {
       title: "Oko Walończyka",
       instruction: "Zrób zdjęcie lub prześlij obraz znalezionego kamienia, aby poddać go analizie przez alchemiczną soczewkę.",

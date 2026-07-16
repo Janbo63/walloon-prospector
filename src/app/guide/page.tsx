@@ -711,13 +711,17 @@ export default function GuidePage() {
       }
     };
     
-    navigator.serviceWorker.addEventListener('message', handleProgressMessage);
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.onmessage = handleProgressMessage;
+    }
 
     return () => {
       if (synthRef.current) {
         synthRef.current.stop();
       }
-      navigator.serviceWorker.removeEventListener('message', handleProgressMessage);
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.onmessage = null;
+      }
     };
   }, []);
 

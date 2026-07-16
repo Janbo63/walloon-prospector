@@ -104,7 +104,7 @@ self.addEventListener('message', (event) => {
 
         const notifyProgress = (url, success) => {
           completed++;
-          self.clients.matchAll().then((clients) => {
+          self.clients.matchAll({ includeUncontrolled: true, type: 'window' }).then((clients) => {
             clients.forEach((client) => {
               client.postMessage({
                 type: 'DOWNLOAD_PROGRESS',
@@ -129,7 +129,7 @@ self.addEventListener('message', (event) => {
               });
           })
         ).then(() => {
-          self.clients.matchAll().then((clients) => {
+          self.clients.matchAll({ includeUncontrolled: true, type: 'window' }).then((clients) => {
             clients.forEach((client) => {
               client.postMessage({
                 type: 'DOWNLOAD_COMPLETE',

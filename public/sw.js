@@ -101,26 +101,31 @@ self.addEventListener('message', (event) => {
       caches.open(CACHE_NAME).then((cache) => {
         let completed = 0;
         const total = urlsToDownload.length;
+
+        const notifyProgress = (url, success) => {
+          completed++;
+          self.clients.matchAll().then((clients) => {
+            clients.forEach((client) => {
+              client.postMessage({
+                type: 'DOWNLOAD_PROGRESS',
+                url: url,
+                completed: completed,
+                total: total,
+                success: success
+              });
+            });
+          });
+        };
         
         return Promise.all(
           urlsToDownload.map((url) => {
             return cache.add(url)
               .then(() => {
-                completed++;
-                // Notify clients about download progress
-                self.clients.matchAll().then((clients) => {
-                  clients.forEach((client) => {
-                    client.postMessage({
-                      type: 'DOWNLOAD_PROGRESS',
-                      url: url,
-                      completed: completed,
-                      total: total
-                    });
-                  });
-                });
+                notifyProgress(url, true);
               })
               .catch((err) => {
                 console.error(`Failed to cache asset ${url}:`, err);
+                notifyProgress(url, false);
               });
           })
         ).then(() => {

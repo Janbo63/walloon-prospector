@@ -836,7 +836,6 @@ export default function GuidePage() {
     // Generate full list of paths to download for offline use
     const audioUrls = Array.from({ length: STOPS.length }, (_, i) => [
       `/audio/en/stop-${i + 1}.mp3`,
-      `/audio/pl/stop-${i + 1}.mp3`,
       `/audio/cs/stop-${i + 1}.mp3`
     ]).flat();
 

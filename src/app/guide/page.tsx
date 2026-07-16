@@ -38,6 +38,12 @@ class CaveAmbientSynthesizer {
     if (this.isRunning) return;
     try {
       this.ctx = new (window.AudioContext || (window as any).webkitAudioContext)();
+      
+      // Force resume to bypass browser autoplay restrictions (crucial for iOS Safari)
+      if (this.ctx.state === 'suspended') {
+        this.ctx.resume();
+      }
+      
       this.masterGain = this.ctx.createGain();
       this.masterGain.gain.setValueAtTime(0.08, this.ctx.currentTime); // keep ambient low and subtle
       this.masterGain.connect(this.ctx.destination);
